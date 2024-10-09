@@ -10,3 +10,12 @@
   git switch -c fix/{name-of-task}
 ```
 
+# Add changes
+```
+  git add -A
+```
+
+# Add commit
+```
+  git commit -m "{name-of-commit}"
+```
