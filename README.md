@@ -19,3 +19,13 @@
 ```
   git commit -m "{name-of-commit}"
 ```
+
+# Push branch
+```
+  git push
+```
+
+# Push again
+```
+    git push --set-upstream origin {own-branch}
+```
