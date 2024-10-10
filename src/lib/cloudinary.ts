@@ -28,4 +28,18 @@ const updateBackgroundImage = async (image: string, promp: string) => {
 	})
 }
 
-export { cloudinary, uploadImageToCloudinary, updateBackgroundImage }
+const removebackgroundImage = async (image: string) => {
+	return cloudinary.url(image, {
+		transformation: [
+			{ width: 500, height: 500, crop: 'fill' },
+			{ effect: 'background_removal' },
+		],
+	})
+}
+
+export {
+	cloudinary,
+	uploadImageToCloudinary,
+	updateBackgroundImage,
+	removebackgroundImage,
+}

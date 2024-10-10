@@ -2,7 +2,11 @@ import fs from 'fs'
 import { NextResponse } from 'next/server'
 import path from 'path'
 
-import { uploadImageToCloudinary } from '@/lib/cloudinary'
+import {
+	updateBackgroundImage,
+	uploadImageToCloudinary,
+} from '@/lib/cloudinary'
+import prisma from '@/lib/prisma'
 import { THEMA } from '@/types'
 import { FormOutputData } from '@/types/api/photo'
 
@@ -34,11 +38,20 @@ export async function POST(request: Request) {
 		const imageUrl = cloudinaryResult.secure_url
 
 		// guardar el registro en DB
-
+		await prisma.userImage.create({
+			data: {
+				path: cloudinaryResult.public_id,
+			},
+		})
 		// hacer el cambio de fondo
 
+		const imageWithBackground = await updateBackgroundImage(
+			cloudinaryResult.public_id,
+			description || 'with thematics background' + theme,
+		)
+
 		const respose: FormOutputData = {
-			imageId: cloudinaryResult.public_id,
+			imageId: imageWithBackground,
 			url: imageUrl,
 			theme: theme,
 			description: description,
