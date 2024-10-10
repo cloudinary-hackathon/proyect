@@ -33,6 +33,10 @@ export async function POST(request: Request) {
 		const cloudinaryResult: any = await uploadImageToCloudinary(filePath)
 		const imageUrl = cloudinaryResult.secure_url
 
+		// guardar el registro en DB
+
+		// hacer el cambio de fondo
+
 		const respose: FormOutputData = {
 			imageId: cloudinaryResult.public_id,
 			url: imageUrl,

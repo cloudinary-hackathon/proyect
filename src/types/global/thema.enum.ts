@@ -4,4 +4,6 @@ export enum THEMA {
 	EASTER = 'easter',
 	BIRTHDAY = 'birthday',
 	WEDDING = 'wedding',
+	VALENTINES = 'valentines',
+	NEW_YEAR = 'new-year',
 }

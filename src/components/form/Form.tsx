@@ -31,17 +31,12 @@ import {
 } from '@/components/ui/popover'
 import { Textarea } from '@/components/ui/textarea'
 import { cn } from '@/lib/utils'
+import { THEMA } from '@/types'
 
-const themes = [
-	{
-		value: 'halloween',
-		label: 'Halloween',
-	},
-	{
-		value: 'navidad',
-		label: 'Navidad',
-	},
-]
+const themes = Object.values(THEMA).map((theme) => ({
+	label: theme,
+	value: theme,
+}))
 
 const formSchema = z.object({
 	images: z.any(),
