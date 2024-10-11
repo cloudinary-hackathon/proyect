@@ -145,6 +145,7 @@ function MainForm() {
                   className="h-48 w-full object-cover rounded-lg"
                 />
                 <button
+				  type="button"
                   onClick={() => removeFile(index)}
                   className="bg-red-500 text-white rounded-full absolute top-1 right-1 px-2 py-1"
                 >
@@ -177,6 +178,7 @@ function MainForm() {
           <Popover open={open} onOpenChange={setOpen}>
             <PopoverTrigger asChild>
               <Button
+			  	type="button"
                 variant="outline"
                 role="combobox"
                 aria-expanded={open}
