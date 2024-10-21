@@ -174,7 +174,7 @@ function MainForm() {
   return (
     <div className="w-full max-w-3xl h-full flex flex-col">
       <div className='w-full flex justify-end'>
-        <ButtonHome name="Volver al inicio" className="mb-5" />
+        <ButtonHome name="Volver al inicio" className="mx-5 my-3" />
       </div>
       <section className="w-full flex justify-center items-center mt-16">
         <Form {...form}>
@@ -249,7 +249,7 @@ function MainForm() {
             )}
 
             {/* THEME */}
-            <section className="w-full flex gap-x-3 items-center justify-center my-10 relative">
+            <section className="w-full flex flex-col sm:flex-row sm:items-center gap-3 items-start justify-center my-10 relative">
               {/* {themeSelected === 'navidad' && (
                 <div className="absolute opacity-40 text-sm -bottom-7 right-0">
                   La temporada actual es de{' '}

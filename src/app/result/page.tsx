@@ -190,12 +190,12 @@ const ResultPage = () => {
   }
 
   return (
-    <main className="bg-background w-full flex flex-col justify-center">
-      <section className="min-h-[55	dvh] mt-10 px-5">
-        <div className='w-full flex justify-end'>
-          <ButtonBack icon={<ArrowLeft />} name='Nueva imagen' className='my-10 gap-1' />
-        </div>
-        <div className="grid grid-cols-[1fr,auto,1fr] justify-items-center gap-10  mb-24">
+    <main className="bg-background w-full max-w-3xl h-full flex flex-col justify-center items-center mx-auto">
+      <div className='w-full flex justify-end'>
+        <ButtonBack name='Nueva imagen' className='gap-1 mx-5 my-3' />
+      </div>
+      <section className="mt-10 px-5">
+        <div className="grid sm:grid-cols-[1fr,auto,1fr] justify-items-center gap-10 mb-24">
           <figcaption>
             <span className="inline-block mb-4 text-4xl font-semibold">
               Imagen original
@@ -209,7 +209,7 @@ const ResultPage = () => {
 
           <figcaption>
             <span className="inline-block mb-4 text-4xl font-semibold">
-              Imagen actualizada
+              Imagen creada
             </span>
 
             <img
